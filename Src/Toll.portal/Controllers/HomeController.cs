@@ -33,7 +33,7 @@ namespace Toll.portal.Controllers
 
         public async Task<IActionResult> CallAPI()
         {
-            var apiUrl = "http://localhost:51187/api/values/getdata";
+            var apiUrl = "http://localhost:5002/api/values/getdata";
 
             var accesToken = Microsoft.AspNetCore.Authentication.AuthenticationHttpContextExtensions.GetTokenAsync(HttpContext, "access_token");
             var client = new HttpClient();
