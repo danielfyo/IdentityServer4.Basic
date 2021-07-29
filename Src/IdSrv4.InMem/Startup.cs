@@ -72,18 +72,6 @@ namespace Ids4.IdenityServer
                     options.ClientId = "81a4e1ff-6876-4ed1-8eb4-740d26726bee";
                     options.ClientSecret = "ue392yV2cDM13DZZ0jMQkr.RsF84v.~0J~";
                 });
-
-            //services.AddAuthentication()
-            //    .AddGoogle(options =>
-            //    {
-            //        options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
-
-            //        // register your IdentityServer with Google at https://console.developers.google.com
-            //        // enable the Google+ API
-            //        // set the redirect URI to http://localhost:5000/signin-google
-            //        options.ClientId = "copy client ID from Google here";
-            //        options.ClientSecret = "copy client secret from Google here";
-            //    });
         }
 
         public void Configure(IApplicationBuilder app)
