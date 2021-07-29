@@ -1,6 +1,6 @@
-using System;
+﻿using System;
 
-namespace Toll.portal.Models
+namespace Ids4.Web.Models
 {
     public class ErrorViewModel
     {

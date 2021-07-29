@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Toll.portal.Controllers
+namespace Ids4.Web.Controllers
 {
     public class LoginController : Controller
     {

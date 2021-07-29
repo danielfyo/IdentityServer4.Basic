@@ -5,11 +5,11 @@ VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{6CD6862D-1583-4B8F-9E67-3A319BC17185}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdSrv4.InMem", "Src\IdSrv4.InMem\IdSrv4.InMem.csproj", "{CB4E936F-63B5-4C3A-BE36-FD20172ED499}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ids4.IdentityServer", "Src\IdSrv4.InMem\Ids4.IdentityServer.csproj", "{CB4E936F-63B5-4C3A-BE36-FD20172ED499}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toll.portal", "Src\Toll.portal\Toll.portal.csproj", "{492343BD-F4A1-4366-B21F-8531F6087C08}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ids4.Web", "Src\Toll.portal\Ids4.Web.csproj", "{492343BD-F4A1-4366-B21F-8531F6087C08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toll.API", "Src\Toll.API\Toll.API.csproj", "{93B662DE-CBDA-4C33-A240-E4EFDF8D6FFA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ids4.Api", "Src\Toll.API\Ids4.Api.csproj", "{93B662DE-CBDA-4C33-A240-E4EFDF8D6FFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

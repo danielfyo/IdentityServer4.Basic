@@ -11,7 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
 using IdentityServer4.Models;
 
-namespace IdSrv4.InMem
+namespace Ids4.IdenityServer
 {
     public class Startup
     {

@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Toll.API.Controllers
+namespace Ids4.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

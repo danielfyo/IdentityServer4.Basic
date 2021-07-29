@@ -2864,3 +2864,535 @@ System.Exception: An error was encountered while handling the remote login. --->
 2021-07-29 00:20:00.050 -05:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
 2021-07-29 00:20:00.069 -05:00 [INF] {"ClientId":"toll.portal","ClientName":"Toll Portal","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":"openid profile toll.api","GrantType":"authorization_code","Tokens":[{"TokenType":"id_token","TokenValue":"****FhEA","$type":"Token"},{"TokenType":"access_token","TokenValue":"****pwVA","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HMAI9V5M2CV5:00000008","TimeStamp":"2021-07-29T05:20:00.0000000Z","ProcessId":15445,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
 2021-07-29 00:20:00.069 -05:00 [DBG] Token request success.
+2021-07-29 00:29:11.434 -05:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2021-07-29 00:29:11.508 -05:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2021-07-29 00:29:11.511 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2021-07-29 00:29:11.511 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2021-07-29 00:29:11.511 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2021-07-29 00:29:11.511 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2021-07-29 00:29:11.511 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2021-07-29 00:29:24.366 -05:00 [DBG] Login Url: /Account/Login
+2021-07-29 00:29:24.369 -05:00 [DBG] Login Return Url Parameter: ReturnUrl
+2021-07-29 00:29:24.369 -05:00 [DBG] Logout Url: /Account/Logout
+2021-07-29 00:29:24.369 -05:00 [DBG] ConsentUrl Url: /consent
+2021-07-29 00:29:24.369 -05:00 [DBG] Consent Return Url Parameter: returnUrl
+2021-07-29 00:29:24.369 -05:00 [DBG] Error Url: /home/error
+2021-07-29 00:29:24.370 -05:00 [DBG] Error Id Parameter: errorId
+2021-07-29 00:29:24.404 -05:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2021-07-29 00:29:24.409 -05:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2021-07-29 00:29:24.410 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2021-07-29 00:29:24.415 -05:00 [DBG] Start discovery request
+2021-07-29 00:29:24.776 -05:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2021-07-29 00:29:24.776 -05:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2021-07-29 00:29:24.776 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2021-07-29 00:29:24.785 -05:00 [DBG] Start key discovery request
+2021-07-29 00:29:24.988 -05:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2021-07-29 00:29:24.995 -05:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2021-07-29 00:29:24.995 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2021-07-29 00:29:25.001 -05:00 [DBG] Start authorize request
+2021-07-29 00:29:25.026 -05:00 [DBG] No user present in authorize request
+2021-07-29 00:29:25.037 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:29:25.072 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:29:25.081 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:29:25.083 -05:00 [DBG] No PKCE used.
+2021-07-29 00:29:25.139 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:29:25.165 -05:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"toll.portal","ClientName":"Toll Portal","RedirectUri":"http://localhost:5001/signin-oidc","AllowedRedirectUris":["http://localhost:5001/signin-oidc"],"SubjectId":"anonymous","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile toll.api","State":"CfDJ8LeXiLOjpwBMhaueQ_AEsdCLp5SvxB_mP4kq7ZDx59R7gUyiZP9jvYxZ5RRd9YYyVkZzP7d8LvpTTaR0Xb9Ma_gSzL_BfcgLPLWnPkvCJ4NV9tRlGKtMrEPHxiiE5-uSAp07OuR1LMYWvkoJ6JkY7Ll5P0JHvsxpLoGpWzQ3xjwdng1BhfOyT8E0IggvrgtxivrRrv0Sw87uKqjqGjrtb8pYDxusS0H_fjDvJ_axOvNGUgUJFBfnp79rVq-VE9e4XDkbAyw9ONqIl4IB7AgWC8Lj1U8vWvC-AV2dXmLfqkIri7F54pfhICXK9p_jr9mSog","UiLocales":null,"Nonce":"637631333649071390.MDE3OWZhMWItZjdjZi00MzZhLWE3YTMtNTE3ZDM5ZTUxNzdlZGQzYmEwNGMtZGVhMS00NjllLWEyNjAtZTY2OGU5NDI5YjE5","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"toll.portal","redirect_uri":"http://localhost:5001/signin-oidc","response_type":"code id_token","scope":"openid profile toll.api","response_mode":"form_post","nonce":"637631333649071390.MDE3OWZhMWItZjdjZi00MzZhLWE3YTMtNTE3ZDM5ZTUxNzdlZGQzYmEwNGMtZGVhMS00NjllLWEyNjAtZTY2OGU5NDI5YjE5","state":"CfDJ8LeXiLOjpwBMhaueQ_AEsdCLp5SvxB_mP4kq7ZDx59R7gUyiZP9jvYxZ5RRd9YYyVkZzP7d8LvpTTaR0Xb9Ma_gSzL_BfcgLPLWnPkvCJ4NV9tRlGKtMrEPHxiiE5-uSAp07OuR1LMYWvkoJ6JkY7Ll5P0JHvsxpLoGpWzQ3xjwdng1BhfOyT8E0IggvrgtxivrRrv0Sw87uKqjqGjrtb8pYDxusS0H_fjDvJ_axOvNGUgUJFBfnp79rVq-VE9e4XDkbAyw9ONqIl4IB7AgWC8Lj1U8vWvC-AV2dXmLfqkIri7F54pfhICXK9p_jr9mSog","x-client-SKU":"ID_NETSTANDARD1_4","x-client-ver":"5.2.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2021-07-29 00:29:25.205 -05:00 [INF] Showing login: User is not authenticated
+2021-07-29 00:29:25.612 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:29:25.612 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:29:25.612 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:29:25.613 -05:00 [DBG] No PKCE used.
+2021-07-29 00:29:25.613 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:29:25.618 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:29:32.334 -05:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2021-07-29 00:29:32.400 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:29:32.400 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:29:32.400 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:29:32.400 -05:00 [DBG] No PKCE used.
+2021-07-29 00:29:32.400 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:29:32.426 -05:00 [INF] {"Username":"bob","Provider":null,"ProviderUserId":null,"SubjectId":"88421113","DisplayName":"bob","Endpoint":"UI","Category":"Authentication","Name":"User Login Success","EventType":"Success","Id":1000,"Message":null,"ActivityId":"0HMAIA79LKUQA:00000002","TimeStamp":"2021-07-29T05:29:32.0000000Z","ProcessId":15905,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLoginSuccessEvent"}
+2021-07-29 00:29:32.446 -05:00 [DBG] Augmenting SignInContext
+2021-07-29 00:29:32.451 -05:00 [DBG] Adding idp claim with value: local
+2021-07-29 00:29:32.451 -05:00 [DBG] Adding amr claim with value: pwd
+2021-07-29 00:29:32.472 -05:00 [INF] AuthenticationScheme: idsrv signed in.
+2021-07-29 00:29:32.474 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:29:32.480 -05:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2021-07-29 00:29:32.481 -05:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2021-07-29 00:29:32.481 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2021-07-29 00:29:32.487 -05:00 [DBG] Start authorize callback request
+2021-07-29 00:29:32.492 -05:00 [DBG] No user present in authorize request
+2021-07-29 00:29:32.493 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:29:32.493 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:29:32.493 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:29:32.493 -05:00 [DBG] No PKCE used.
+2021-07-29 00:29:32.493 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:29:32.494 -05:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"toll.portal","ClientName":"Toll Portal","RedirectUri":"http://localhost:5001/signin-oidc","AllowedRedirectUris":["http://localhost:5001/signin-oidc"],"SubjectId":"anonymous","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile toll.api","State":"CfDJ8LeXiLOjpwBMhaueQ_AEsdCLp5SvxB_mP4kq7ZDx59R7gUyiZP9jvYxZ5RRd9YYyVkZzP7d8LvpTTaR0Xb9Ma_gSzL_BfcgLPLWnPkvCJ4NV9tRlGKtMrEPHxiiE5-uSAp07OuR1LMYWvkoJ6JkY7Ll5P0JHvsxpLoGpWzQ3xjwdng1BhfOyT8E0IggvrgtxivrRrv0Sw87uKqjqGjrtb8pYDxusS0H_fjDvJ_axOvNGUgUJFBfnp79rVq-VE9e4XDkbAyw9ONqIl4IB7AgWC8Lj1U8vWvC-AV2dXmLfqkIri7F54pfhICXK9p_jr9mSog","UiLocales":null,"Nonce":"637631333649071390.MDE3OWZhMWItZjdjZi00MzZhLWE3YTMtNTE3ZDM5ZTUxNzdlZGQzYmEwNGMtZGVhMS00NjllLWEyNjAtZTY2OGU5NDI5YjE5","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"toll.portal","redirect_uri":"http://localhost:5001/signin-oidc","response_type":"code id_token","scope":"openid profile toll.api","response_mode":"form_post","nonce":"637631333649071390.MDE3OWZhMWItZjdjZi00MzZhLWE3YTMtNTE3ZDM5ZTUxNzdlZGQzYmEwNGMtZGVhMS00NjllLWEyNjAtZTY2OGU5NDI5YjE5","state":"CfDJ8LeXiLOjpwBMhaueQ_AEsdCLp5SvxB_mP4kq7ZDx59R7gUyiZP9jvYxZ5RRd9YYyVkZzP7d8LvpTTaR0Xb9Ma_gSzL_BfcgLPLWnPkvCJ4NV9tRlGKtMrEPHxiiE5-uSAp07OuR1LMYWvkoJ6JkY7Ll5P0JHvsxpLoGpWzQ3xjwdng1BhfOyT8E0IggvrgtxivrRrv0Sw87uKqjqGjrtb8pYDxusS0H_fjDvJ_axOvNGUgUJFBfnp79rVq-VE9e4XDkbAyw9ONqIl4IB7AgWC8Lj1U8vWvC-AV2dXmLfqkIri7F54pfhICXK9p_jr9mSog","x-client-SKU":"ID_NETSTANDARD1_4","x-client-ver":"5.2.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2021-07-29 00:29:32.494 -05:00 [INF] Showing login: User is not authenticated
+2021-07-29 00:29:32.500 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:29:32.501 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:29:32.501 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:29:32.501 -05:00 [DBG] No PKCE used.
+2021-07-29 00:29:32.501 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:29:32.503 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:29:34.017 -05:00 [INF] AuthenticationScheme: Microsoft was challenged.
+2021-07-29 00:29:35.545 -05:00 [WRN] '.AspNetCore.Correlation.Microsoft.10zUyeJgipG_44kyO9ON-E8xKeLzWI54NTd1vQTcugw' cookie not found.
+2021-07-29 00:29:35.545 -05:00 [INF] Error from RemoteAuthentication: Correlation failed..
+2021-07-29 00:29:35.550 -05:00 [ERR] An unhandled exception has occurred while executing the request.
+System.Exception: An error was encountered while handling the remote login. ---> System.Exception: Correlation failed.
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Authentication.RemoteAuthenticationHandler`1.HandleRequestAsync()
+   at IdentityServer4.Hosting.FederatedSignOut.AuthenticationRequestHandlerWrapper.HandleRequestAsync() in C:\local\identity\server4\IdentityServer4\src\Hosting\FederatedSignOut\AuthenticationRequestHandlerWrapper.cs:line 38
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Cors.Infrastructure.CorsMiddleware.Invoke(HttpContext context)
+   at IdentityServer4.Hosting.BaseUrlMiddleware.Invoke(HttpContext context) in C:\local\identity\server4\IdentityServer4\src\Hosting\BaseUrlMiddleware.cs:line 36
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2021-07-29 00:29:50.656 -05:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2021-07-29 00:29:50.657 -05:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2021-07-29 00:29:50.657 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2021-07-29 00:29:50.657 -05:00 [DBG] Start authorize request
+2021-07-29 00:29:50.657 -05:00 [DBG] No user present in authorize request
+2021-07-29 00:29:50.657 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:29:50.657 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:29:50.657 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:29:50.657 -05:00 [DBG] No PKCE used.
+2021-07-29 00:29:50.658 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:29:50.658 -05:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"toll.portal","ClientName":"Toll Portal","RedirectUri":"http://localhost:5001/signin-oidc","AllowedRedirectUris":["http://localhost:5001/signin-oidc"],"SubjectId":"anonymous","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile toll.api","State":"CfDJ8LeXiLOjpwBMhaueQ_AEsdAj1T_ts1heNWvJuxDc3lGsASD74tGhbK-E7Lq01uqLuixKHbDCOlT2-MWr1ldfhCMFCkRpDxVwo5ff85MAt-v3d5FcPnumudM0PBk_p4JTPq99t8SgFiFDbB8aLLeJYUuIp0j4m7hRaNL_3BLXgvdXejMlDou8LINq_3aljq4wP1YKS5wMynVxP_PjpWufJkp5bSDL5GBlZ9SK-6LcY7Vs1YL1yQRR07toI0keUkqJ6b3Ma4msdIJCMYZpFOaK6DJG33smMkL-L13AMLEFke6ybHA5iBSXgaQiV6bU1r2Kig","UiLocales":null,"Nonce":"637631333906339820.NGI0YzRjN2ItYWQ2NC00NjY1LWE4NDUtYjliOTVkMzlhNzYzMjUyODMwYWUtZDVhYS00YTUxLWFhNzktOGFlNjhiM2NmZWQ0","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"toll.portal","redirect_uri":"http://localhost:5001/signin-oidc","response_type":"code id_token","scope":"openid profile toll.api","response_mode":"form_post","nonce":"637631333906339820.NGI0YzRjN2ItYWQ2NC00NjY1LWE4NDUtYjliOTVkMzlhNzYzMjUyODMwYWUtZDVhYS00YTUxLWFhNzktOGFlNjhiM2NmZWQ0","state":"CfDJ8LeXiLOjpwBMhaueQ_AEsdAj1T_ts1heNWvJuxDc3lGsASD74tGhbK-E7Lq01uqLuixKHbDCOlT2-MWr1ldfhCMFCkRpDxVwo5ff85MAt-v3d5FcPnumudM0PBk_p4JTPq99t8SgFiFDbB8aLLeJYUuIp0j4m7hRaNL_3BLXgvdXejMlDou8LINq_3aljq4wP1YKS5wMynVxP_PjpWufJkp5bSDL5GBlZ9SK-6LcY7Vs1YL1yQRR07toI0keUkqJ6b3Ma4msdIJCMYZpFOaK6DJG33smMkL-L13AMLEFke6ybHA5iBSXgaQiV6bU1r2Kig","x-client-SKU":"ID_NETSTANDARD1_4","x-client-ver":"5.2.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2021-07-29 00:29:50.658 -05:00 [INF] Showing login: User is not authenticated
+2021-07-29 00:29:50.665 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:29:50.665 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:29:50.665 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:29:50.665 -05:00 [DBG] No PKCE used.
+2021-07-29 00:29:50.665 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:29:50.665 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:29:56.505 -05:00 [DBG] CORS request made for path: /Account/Login from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2021-07-29 00:29:56.509 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:29:56.509 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:29:56.509 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:29:56.510 -05:00 [DBG] No PKCE used.
+2021-07-29 00:29:56.510 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:29:56.510 -05:00 [INF] {"Username":"bob","Provider":null,"ProviderUserId":null,"SubjectId":"88421113","DisplayName":"bob","Endpoint":"UI","Category":"Authentication","Name":"User Login Success","EventType":"Success","Id":1000,"Message":null,"ActivityId":"0HMAIA79LKUQB:00000005","TimeStamp":"2021-07-29T05:29:56.0000000Z","ProcessId":15905,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLoginSuccessEvent"}
+2021-07-29 00:29:56.510 -05:00 [DBG] Augmenting SignInContext
+2021-07-29 00:29:56.510 -05:00 [DBG] Adding idp claim with value: local
+2021-07-29 00:29:56.510 -05:00 [DBG] Adding amr claim with value: pwd
+2021-07-29 00:29:56.511 -05:00 [INF] AuthenticationScheme: idsrv signed in.
+2021-07-29 00:29:56.511 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:29:56.516 -05:00 [DBG] CORS request made for path: /connect/authorize/callback from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2021-07-29 00:29:56.517 -05:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2021-07-29 00:29:56.518 -05:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2021-07-29 00:29:56.518 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2021-07-29 00:29:56.518 -05:00 [DBG] Start authorize callback request
+2021-07-29 00:29:56.518 -05:00 [DBG] User in authorize request: 88421113
+2021-07-29 00:29:56.518 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:29:56.518 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:29:56.518 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:29:56.519 -05:00 [DBG] No PKCE used.
+2021-07-29 00:29:56.519 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:29:56.519 -05:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"toll.portal","ClientName":"Toll Portal","RedirectUri":"http://localhost:5001/signin-oidc","AllowedRedirectUris":["http://localhost:5001/signin-oidc"],"SubjectId":"88421113","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile toll.api","State":"CfDJ8LeXiLOjpwBMhaueQ_AEsdAj1T_ts1heNWvJuxDc3lGsASD74tGhbK-E7Lq01uqLuixKHbDCOlT2-MWr1ldfhCMFCkRpDxVwo5ff85MAt-v3d5FcPnumudM0PBk_p4JTPq99t8SgFiFDbB8aLLeJYUuIp0j4m7hRaNL_3BLXgvdXejMlDou8LINq_3aljq4wP1YKS5wMynVxP_PjpWufJkp5bSDL5GBlZ9SK-6LcY7Vs1YL1yQRR07toI0keUkqJ6b3Ma4msdIJCMYZpFOaK6DJG33smMkL-L13AMLEFke6ybHA5iBSXgaQiV6bU1r2Kig","UiLocales":null,"Nonce":"637631333906339820.NGI0YzRjN2ItYWQ2NC00NjY1LWE4NDUtYjliOTVkMzlhNzYzMjUyODMwYWUtZDVhYS00YTUxLWFhNzktOGFlNjhiM2NmZWQ0","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"34b7ea9e15a12e2aa38a30ce1ac0439c","Raw":{"client_id":"toll.portal","redirect_uri":"http://localhost:5001/signin-oidc","response_type":"code id_token","scope":"openid profile toll.api","response_mode":"form_post","nonce":"637631333906339820.NGI0YzRjN2ItYWQ2NC00NjY1LWE4NDUtYjliOTVkMzlhNzYzMjUyODMwYWUtZDVhYS00YTUxLWFhNzktOGFlNjhiM2NmZWQ0","state":"CfDJ8LeXiLOjpwBMhaueQ_AEsdAj1T_ts1heNWvJuxDc3lGsASD74tGhbK-E7Lq01uqLuixKHbDCOlT2-MWr1ldfhCMFCkRpDxVwo5ff85MAt-v3d5FcPnumudM0PBk_p4JTPq99t8SgFiFDbB8aLLeJYUuIp0j4m7hRaNL_3BLXgvdXejMlDou8LINq_3aljq4wP1YKS5wMynVxP_PjpWufJkp5bSDL5GBlZ9SK-6LcY7Vs1YL1yQRR07toI0keUkqJ6b3Ma4msdIJCMYZpFOaK6DJG33smMkL-L13AMLEFke6ybHA5iBSXgaQiV6bU1r2Kig","x-client-SKU":"ID_NETSTANDARD1_4","x-client-ver":"5.2.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2021-07-29 00:29:56.522 -05:00 [DBG] IsActive called from: AuthorizeEndpoint
+2021-07-29 00:29:56.542 -05:00 [DBG] user_consent grant with value: toll.portal|88421113 not found in store.
+2021-07-29 00:29:56.542 -05:00 [DBG] Found no prior consent from consent store, consent is required
+2021-07-29 00:29:56.542 -05:00 [INF] Showing consent: User has not yet consented
+2021-07-29 00:29:56.560 -05:00 [DBG] CORS request made for path: /consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2021-07-29 00:29:56.581 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:29:56.581 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:29:56.581 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:29:56.581 -05:00 [DBG] No PKCE used.
+2021-07-29 00:29:56.582 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:29:56.582 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:29:59.594 -05:00 [DBG] CORS request made for path: /consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2021-07-29 00:29:59.624 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:29:59.625 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:29:59.625 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:29:59.625 -05:00 [DBG] No PKCE used.
+2021-07-29 00:29:59.625 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:29:59.627 -05:00 [INF] {"SubjectId":"88421113","ClientId":"toll.portal","RequestedScopes":["openid","profile","toll.api"],"GrantedScopes":["openid","profile","toll.api"],"ConsentRemembered":true,"Category":"Grants","Name":"Consent granted","EventType":"Information","Id":4000,"Message":null,"ActivityId":"0HMAIA79LKUQB:00000009","TimeStamp":"2021-07-29T05:29:59.0000000Z","ProcessId":15905,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ConsentGrantedEvent"}
+2021-07-29 00:29:59.645 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:29:59.650 -05:00 [DBG] CORS request made for path: /connect/authorize/callback from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2021-07-29 00:29:59.651 -05:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2021-07-29 00:29:59.651 -05:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2021-07-29 00:29:59.651 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2021-07-29 00:29:59.651 -05:00 [DBG] Start authorize callback request
+2021-07-29 00:29:59.659 -05:00 [DBG] User in authorize request: 88421113
+2021-07-29 00:29:59.659 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:29:59.659 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:29:59.659 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:29:59.659 -05:00 [DBG] No PKCE used.
+2021-07-29 00:29:59.659 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:29:59.660 -05:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"toll.portal","ClientName":"Toll Portal","RedirectUri":"http://localhost:5001/signin-oidc","AllowedRedirectUris":["http://localhost:5001/signin-oidc"],"SubjectId":"88421113","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile toll.api","State":"CfDJ8LeXiLOjpwBMhaueQ_AEsdAj1T_ts1heNWvJuxDc3lGsASD74tGhbK-E7Lq01uqLuixKHbDCOlT2-MWr1ldfhCMFCkRpDxVwo5ff85MAt-v3d5FcPnumudM0PBk_p4JTPq99t8SgFiFDbB8aLLeJYUuIp0j4m7hRaNL_3BLXgvdXejMlDou8LINq_3aljq4wP1YKS5wMynVxP_PjpWufJkp5bSDL5GBlZ9SK-6LcY7Vs1YL1yQRR07toI0keUkqJ6b3Ma4msdIJCMYZpFOaK6DJG33smMkL-L13AMLEFke6ybHA5iBSXgaQiV6bU1r2Kig","UiLocales":null,"Nonce":"637631333906339820.NGI0YzRjN2ItYWQ2NC00NjY1LWE4NDUtYjliOTVkMzlhNzYzMjUyODMwYWUtZDVhYS00YTUxLWFhNzktOGFlNjhiM2NmZWQ0","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"34b7ea9e15a12e2aa38a30ce1ac0439c","Raw":{"client_id":"toll.portal","redirect_uri":"http://localhost:5001/signin-oidc","response_type":"code id_token","scope":"openid profile toll.api","response_mode":"form_post","nonce":"637631333906339820.NGI0YzRjN2ItYWQ2NC00NjY1LWE4NDUtYjliOTVkMzlhNzYzMjUyODMwYWUtZDVhYS00YTUxLWFhNzktOGFlNjhiM2NmZWQ0","state":"CfDJ8LeXiLOjpwBMhaueQ_AEsdAj1T_ts1heNWvJuxDc3lGsASD74tGhbK-E7Lq01uqLuixKHbDCOlT2-MWr1ldfhCMFCkRpDxVwo5ff85MAt-v3d5FcPnumudM0PBk_p4JTPq99t8SgFiFDbB8aLLeJYUuIp0j4m7hRaNL_3BLXgvdXejMlDou8LINq_3aljq4wP1YKS5wMynVxP_PjpWufJkp5bSDL5GBlZ9SK-6LcY7Vs1YL1yQRR07toI0keUkqJ6b3Ma4msdIJCMYZpFOaK6DJG33smMkL-L13AMLEFke6ybHA5iBSXgaQiV6bU1r2Kig","x-client-SKU":"ID_NETSTANDARD1_4","x-client-ver":"5.2.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2021-07-29 00:29:59.660 -05:00 [DBG] IsActive called from: AuthorizeEndpoint
+2021-07-29 00:29:59.660 -05:00 [DBG] user_consent grant with value: toll.portal|88421113 not found in store.
+2021-07-29 00:29:59.660 -05:00 [DBG] Found no prior consent from consent store, consent is required
+2021-07-29 00:29:59.668 -05:00 [INF] User consented to scopes: ["openid","profile","toll.api"]
+2021-07-29 00:29:59.670 -05:00 [DBG] User indicated to remember consent for scopes: ["openid","profile","toll.api"]
+2021-07-29 00:29:59.675 -05:00 [DBG] Client allows remembering consent, and consent given. Updating consent store for subject: 88421113
+2021-07-29 00:29:59.696 -05:00 [DBG] Creating Hybrid Flow response.
+2021-07-29 00:29:59.723 -05:00 [DBG] Creating Implicit Flow response.
+2021-07-29 00:29:59.738 -05:00 [DBG] Getting claims for identity token for subject: 88421113 and client: toll.portal
+2021-07-29 00:29:59.741 -05:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2021-07-29 00:29:59.915 -05:00 [INF] {"ClientId":"toll.portal","ClientName":"Toll Portal","RedirectUri":"http://localhost:5001/signin-oidc","Endpoint":"Authorize","SubjectId":"88421113","Scopes":"openid profile toll.api","GrantType":"hybrid","Tokens":[{"TokenType":"id_token","TokenValue":"****sNbg","$type":"Token"},{"TokenType":"code","TokenValue":"****c5a8","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HMAIA79LKUQB:0000000A","TimeStamp":"2021-07-29T05:29:59.0000000Z","ProcessId":15905,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2021-07-29 00:29:59.918 -05:00 [INF] Authorize endpoint response
+{"SubjectId":"88421113","ClientId":"toll.portal","RedirectUri":"http://localhost:5001/signin-oidc","State":"CfDJ8LeXiLOjpwBMhaueQ_AEsdAj1T_ts1heNWvJuxDc3lGsASD74tGhbK-E7Lq01uqLuixKHbDCOlT2-MWr1ldfhCMFCkRpDxVwo5ff85MAt-v3d5FcPnumudM0PBk_p4JTPq99t8SgFiFDbB8aLLeJYUuIp0j4m7hRaNL_3BLXgvdXejMlDou8LINq_3aljq4wP1YKS5wMynVxP_PjpWufJkp5bSDL5GBlZ9SK-6LcY7Vs1YL1yQRR07toI0keUkqJ6b3Ma4msdIJCMYZpFOaK6DJG33smMkL-L13AMLEFke6ybHA5iBSXgaQiV6bU1r2Kig","Scope":"openid profile toll.api","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2021-07-29 00:29:59.948 -05:00 [DBG] Augmenting SignInContext
+2021-07-29 00:29:59.948 -05:00 [INF] AuthenticationScheme: idsrv signed in.
+2021-07-29 00:30:00.106 -05:00 [DBG] Request path /connect/token matched to endpoint type Token
+2021-07-29 00:30:00.111 -05:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2021-07-29 00:30:00.111 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2021-07-29 00:30:00.121 -05:00 [DBG] Start token request.
+2021-07-29 00:30:00.133 -05:00 [DBG] Start client validation
+2021-07-29 00:30:00.144 -05:00 [DBG] Start parsing Basic Authentication secret
+2021-07-29 00:30:00.151 -05:00 [DBG] Start parsing for secret in post body
+2021-07-29 00:30:00.156 -05:00 [DBG] Parser found secret: PostBodySecretParser
+2021-07-29 00:30:00.156 -05:00 [DBG] Secret id found: toll.portal
+2021-07-29 00:30:00.156 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:30:00.172 -05:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2021-07-29 00:30:00.172 -05:00 [DBG] Client validation success
+2021-07-29 00:30:00.172 -05:00 [INF] {"ClientId":"toll.portal","AuthenticationMethod":"SharedSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HMAIA79LKUQ5:00000003","TimeStamp":"2021-07-29T05:30:00.0000000Z","ProcessId":15905,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2021-07-29 00:30:00.180 -05:00 [DBG] Start token request validation
+2021-07-29 00:30:00.193 -05:00 [DBG] Start validation of authorization code token request
+2021-07-29 00:30:00.208 -05:00 [DBG] IsActive called from: AuthorizationCodeValidation
+2021-07-29 00:30:00.208 -05:00 [DBG] Validation of authorization code token request success
+2021-07-29 00:30:00.210 -05:00 [INF] Token request validation success
+{"ClientId":"toll.portal","ClientName":"Toll Portal","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"d75b47ddd2b450a9e4a58a25a232b03a761cbdd2c376edd9b8d062a8f124c5a8","RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"toll.portal","client_secret":"***REDACTED***","code":"d75b47ddd2b450a9e4a58a25a232b03a761cbdd2c376edd9b8d062a8f124c5a8","grant_type":"authorization_code","redirect_uri":"http://localhost:5001/signin-oidc"},"$type":"TokenRequestValidationLog"}
+2021-07-29 00:30:00.227 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:30:00.239 -05:00 [DBG] Getting claims for access token for client: toll.portal
+2021-07-29 00:30:00.239 -05:00 [DBG] Getting claims for access token for subject: 88421113
+2021-07-29 00:30:00.242 -05:00 [DBG] Get profile called for subject 88421113 from client Toll Portal with claim types [] via ClaimsProviderAccessToken
+2021-07-29 00:30:00.243 -05:00 [DBG] Issued claims: []
+2021-07-29 00:30:00.258 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:30:00.258 -05:00 [DBG] Getting claims for identity token for subject: 88421113 and client: toll.portal
+2021-07-29 00:30:00.259 -05:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2021-07-29 00:30:00.271 -05:00 [INF] {"ClientId":"toll.portal","ClientName":"Toll Portal","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":"openid profile toll.api","GrantType":"authorization_code","Tokens":[{"TokenType":"id_token","TokenValue":"****iILg","$type":"Token"},{"TokenType":"access_token","TokenValue":"****FwAg","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HMAIA79LKUQ5:00000003","TimeStamp":"2021-07-29T05:30:00.0000000Z","ProcessId":15905,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2021-07-29 00:30:00.273 -05:00 [DBG] Token request success.
+2021-07-29 00:30:02.404 -05:00 [DBG] Request path /connect/endsession matched to endpoint type Endsession
+2021-07-29 00:30:02.405 -05:00 [DBG] Endpoint enabled: Endsession, successfully created handler: IdentityServer4.Endpoints.EndSessionEndpoint
+2021-07-29 00:30:02.405 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.EndSessionEndpoint for /connect/endsession
+2021-07-29 00:30:02.411 -05:00 [DBG] Processing signout request for 88421113
+2021-07-29 00:30:02.418 -05:00 [DBG] Start end session request validation
+2021-07-29 00:30:02.425 -05:00 [DBG] Start identity token validation
+2021-07-29 00:30:02.441 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:30:02.442 -05:00 [DBG] Client found: toll.portal / Toll Portal
+2021-07-29 00:30:02.493 -05:00 [DBG] IsActive called from: IdentityTokenValidation
+2021-07-29 00:30:02.493 -05:00 [DBG] Calling into custom token validator: IdentityServer4.Validation.DefaultCustomTokenValidator
+2021-07-29 00:30:02.495 -05:00 [DBG] Token validation success
+{"ClientId":"toll.portal","ClientName":"Toll Portal","ValidateLifetime":false,"AccessTokenType":null,"ExpectedScope":null,"TokenHandle":null,"JwtId":null,"Claims":{"nbf":1627536600,"exp":1627536900,"iss":"http://localhost:5000","aud":"toll.portal","nonce":"637631333906339820.NGI0YzRjN2ItYWQ2NC00NjY1LWE4NDUtYjliOTVkMzlhNzYzMjUyODMwYWUtZDVhYS00YTUxLWFhNzktOGFlNjhiM2NmZWQ0","iat":1627536600,"at_hash":"06btYiY_z2iGLH98iQMUDA","sid":"34b7ea9e15a12e2aa38a30ce1ac0439c","sub":"88421113","auth_time":1627536596,"idp":"local","amr":"pwd"},"$type":"TokenValidationLog"}
+2021-07-29 00:30:02.499 -05:00 [INF] End session request validation success
+{"ClientId":"toll.portal","ClientName":"Toll Portal","SubjectId":"88421113","PostLogOutUri":"http://localhost:5001/signout-callback-oidc","State":"CfDJ8LeXiLOjpwBMhaueQ_AEsdBq_thLUJUjxN4yjuVMgyR1Jfm2F5h2ozhyCFagiIqYRGIhm4uXb13kRbzHu_NJOBtKk5uV_erXwwV7EA9f2gjfpJFzhzr0TOjm-ai188uyM_JmsRy7Qlc8iA-E4dGeZa0","Raw":{"post_logout_redirect_uri":"http://localhost:5001/signout-callback-oidc","id_token_hint":"eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiZjVhYzU1YmQzMDM4Yzg3NjhlZGJhYWMxYzk1YmIwIiwidHlwIjoiSldUIn0.eyJuYmYiOjE2Mjc1MzY2MDAsImV4cCI6MTYyNzUzNjkwMCwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjoidG9sbC5wb3J0YWwiLCJub25jZSI6IjYzNzYzMTMzMzkwNjMzOTgyMC5OR0kwWXpSak4ySXRZV1EyTkMwME5qWTFMV0U0TkRVdFlqbGlPVFZrTXpsaE56WXpNalV5T0RNd1lXVXRaRFZoWVMwMFlUVXhMV0ZoTnprdE9HRmxOamhpTTJObVpXUTAiLCJpYXQiOjE2Mjc1MzY2MDAsImF0X2hhc2giOiIwNmJ0WWlZX3oyaUdMSDk4aVFNVURBIiwic2lkIjoiMzRiN2VhOWUxNWExMmUyYWEzOGEzMGNlMWFjMDQzOWMiLCJzdWIiOiI4ODQyMTExMyIsImF1dGhfdGltZSI6MTYyNzUzNjU5NiwiaWRwIjoibG9jYWwiLCJhbXIiOlsicHdkIl19.L-K9y3CN3M5HmOBGaLlkj7TA-8C-MNWEyN_szcjHU22jaUoaQzCvMsatMB3CjKKawXE5tg8J6AsiOGbjm7IOji1zHqdxsaS64EaCau9_sBVNx0q7CAO0WQu5mzsqRQcApon88wE2oz0RcqFdo87sPHfzfFQJzziIAGRDshtpvFsi7onUErJYVEYGWhByMVbQC900bJjfpeKYEXhyWXDbBjwQqHpEP1Cr3MYxPAkDKFwZzpWuVbi3XxXvgsAOopE0Gp4kKzBit0CJVRkQq_pkQEOtodZ78X4r1ejLKuq1_CgekFCuuK2I_TE53_zilaN-aD2OduqUU2xDGCYApPiILg","state":"CfDJ8LeXiLOjpwBMhaueQ_AEsdBq_thLUJUjxN4yjuVMgyR1Jfm2F5h2ozhyCFagiIqYRGIhm4uXb13kRbzHu_NJOBtKk5uV_erXwwV7EA9f2gjfpJFzhzr0TOjm-ai188uyM_JmsRy7Qlc8iA-E4dGeZa0","x-client-SKU":"ID_NETSTANDARD1_4","x-client-ver":"5.2.0.0"},"$type":"EndSessionRequestValidationLog"}
+2021-07-29 00:30:02.499 -05:00 [DBG] Success validating end session request from toll.portal
+2021-07-29 00:30:02.553 -05:00 [INF] AuthenticationScheme: idsrv signed out.
+2021-07-29 00:30:02.555 -05:00 [INF] {"SubjectId":"88421113","DisplayName":"bob","Category":"Authentication","Name":"User Logout Success","EventType":"Success","Id":1002,"Message":null,"ActivityId":"0HMAIA79LKUQB:0000000C","TimeStamp":"2021-07-29T05:30:02.0000000Z","ProcessId":15905,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLogoutSuccessEvent"}
+2021-07-29 00:30:02.664 -05:00 [DBG] Request path /connect/endsession/callback matched to endpoint type Endsession
+2021-07-29 00:30:02.667 -05:00 [DBG] Endpoint enabled: Endsession, successfully created handler: IdentityServer4.Endpoints.EndSessionCallbackEndpoint
+2021-07-29 00:30:02.667 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.EndSessionCallbackEndpoint for /connect/endsession/callback
+2021-07-29 00:30:02.682 -05:00 [DBG] Processing signout callback request
+2021-07-29 00:30:02.698 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:30:02.698 -05:00 [DBG] No client front-channel logout URLs
+2021-07-29 00:30:02.698 -05:00 [DBG] No client back-channel logout URLs
+2021-07-29 00:30:02.698 -05:00 [INF] Successful signout callback.
+2021-07-29 00:30:02.698 -05:00 [DBG] No client front-channel iframe urls
+2021-07-29 00:30:02.698 -05:00 [DBG] No client back-channel iframe urls
+2021-07-29 00:30:07.218 -05:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2021-07-29 00:30:07.218 -05:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2021-07-29 00:30:07.218 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2021-07-29 00:30:07.219 -05:00 [DBG] Start authorize request
+2021-07-29 00:30:07.219 -05:00 [DBG] No user present in authorize request
+2021-07-29 00:30:07.219 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:30:07.219 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:30:07.219 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:30:07.219 -05:00 [DBG] No PKCE used.
+2021-07-29 00:30:07.219 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:30:07.219 -05:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"toll.portal","ClientName":"Toll Portal","RedirectUri":"http://localhost:5001/signin-oidc","AllowedRedirectUris":["http://localhost:5001/signin-oidc"],"SubjectId":"anonymous","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile toll.api","State":"CfDJ8LeXiLOjpwBMhaueQ_AEsdDz2TncMvM4FpvjEIyzLvXOZSYREJzEXL3zo4qdNBF9VenB3yHtMlCZvgd1G559Yy-j4lkxvDyxEAaxbE-OBYJM3P9a4zmQ8lmxvPJL-FaBesoKTBcT6JQa-o1E-bTW7S2cnlfBPDkwNF1Mnt1VSV46gcVO1Pp35ddFtdIR953r6NXIFpxPcFiz1GpMDoI59gTZSBftGOjMJzOQt6qpHAvxoxwIP8hU1Ys7mgzhsPyvdcPOV0AzYS7B4_kbyg99CBq_Y5dVfZW8WzmL-2rl5jBYcAJRamjIdRREL1zisDKB4A","UiLocales":null,"Nonce":"637631334071956200.MzQyMzJlYjAtOGZhMC00NjE2LWI4Y2YtYjNlOTExOGIyMWE2NDFjMGVhNzAtM2I5NS00ZDNhLTg1NzctYmZmOTIwMjAzMmIz","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"toll.portal","redirect_uri":"http://localhost:5001/signin-oidc","response_type":"code id_token","scope":"openid profile toll.api","response_mode":"form_post","nonce":"637631334071956200.MzQyMzJlYjAtOGZhMC00NjE2LWI4Y2YtYjNlOTExOGIyMWE2NDFjMGVhNzAtM2I5NS00ZDNhLTg1NzctYmZmOTIwMjAzMmIz","state":"CfDJ8LeXiLOjpwBMhaueQ_AEsdDz2TncMvM4FpvjEIyzLvXOZSYREJzEXL3zo4qdNBF9VenB3yHtMlCZvgd1G559Yy-j4lkxvDyxEAaxbE-OBYJM3P9a4zmQ8lmxvPJL-FaBesoKTBcT6JQa-o1E-bTW7S2cnlfBPDkwNF1Mnt1VSV46gcVO1Pp35ddFtdIR953r6NXIFpxPcFiz1GpMDoI59gTZSBftGOjMJzOQt6qpHAvxoxwIP8hU1Ys7mgzhsPyvdcPOV0AzYS7B4_kbyg99CBq_Y5dVfZW8WzmL-2rl5jBYcAJRamjIdRREL1zisDKB4A","x-client-SKU":"ID_NETSTANDARD1_4","x-client-ver":"5.2.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2021-07-29 00:30:07.219 -05:00 [INF] Showing login: User is not authenticated
+2021-07-29 00:30:07.226 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:30:07.226 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:30:07.226 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:30:07.226 -05:00 [DBG] No PKCE used.
+2021-07-29 00:30:07.226 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:30:07.226 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:30:08.232 -05:00 [INF] AuthenticationScheme: Microsoft was challenged.
+2021-07-29 00:30:10.837 -05:00 [INF] AuthenticationScheme: idsrv.external signed in.
+2021-07-29 00:30:10.859 -05:00 [INF] {"Username":null,"Provider":"Microsoft","ProviderUserId":"9de2d92f-1f0b-4bfd-b264-05b8557f518f","SubjectId":"53912b12772325d4d4f8828607a344bae543a179e4a4d1e5c7729b796336b45d","DisplayName":"Daniel Felipe Yepes Ortega","Endpoint":"UI","Category":"Authentication","Name":"User Login Success","EventType":"Success","Id":1000,"Message":null,"ActivityId":"0HMAIA79LKUQG:00000002","TimeStamp":"2021-07-29T05:30:10.0000000Z","ProcessId":15905,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLoginSuccessEvent"}
+2021-07-29 00:30:10.862 -05:00 [DBG] Augmenting SignInContext
+2021-07-29 00:30:10.862 -05:00 [DBG] Adding amr claim with value: external
+2021-07-29 00:30:10.862 -05:00 [INF] AuthenticationScheme: idsrv signed in.
+2021-07-29 00:30:10.863 -05:00 [INF] AuthenticationScheme: idsrv.external signed out.
+2021-07-29 00:30:10.863 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:30:10.863 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:30:10.863 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:30:10.863 -05:00 [DBG] No PKCE used.
+2021-07-29 00:30:10.863 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:30:10.863 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:30:10.870 -05:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2021-07-29 00:30:10.870 -05:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2021-07-29 00:30:10.870 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2021-07-29 00:30:10.870 -05:00 [DBG] Start authorize callback request
+2021-07-29 00:30:10.870 -05:00 [DBG] User in authorize request: 53912b12772325d4d4f8828607a344bae543a179e4a4d1e5c7729b796336b45d
+2021-07-29 00:30:10.870 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:30:10.870 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:30:10.870 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:30:10.870 -05:00 [DBG] No PKCE used.
+2021-07-29 00:30:10.871 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:30:10.871 -05:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"toll.portal","ClientName":"Toll Portal","RedirectUri":"http://localhost:5001/signin-oidc","AllowedRedirectUris":["http://localhost:5001/signin-oidc"],"SubjectId":"53912b12772325d4d4f8828607a344bae543a179e4a4d1e5c7729b796336b45d","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile toll.api","State":"CfDJ8LeXiLOjpwBMhaueQ_AEsdDz2TncMvM4FpvjEIyzLvXOZSYREJzEXL3zo4qdNBF9VenB3yHtMlCZvgd1G559Yy-j4lkxvDyxEAaxbE-OBYJM3P9a4zmQ8lmxvPJL-FaBesoKTBcT6JQa-o1E-bTW7S2cnlfBPDkwNF1Mnt1VSV46gcVO1Pp35ddFtdIR953r6NXIFpxPcFiz1GpMDoI59gTZSBftGOjMJzOQt6qpHAvxoxwIP8hU1Ys7mgzhsPyvdcPOV0AzYS7B4_kbyg99CBq_Y5dVfZW8WzmL-2rl5jBYcAJRamjIdRREL1zisDKB4A","UiLocales":null,"Nonce":"637631334071956200.MzQyMzJlYjAtOGZhMC00NjE2LWI4Y2YtYjNlOTExOGIyMWE2NDFjMGVhNzAtM2I5NS00ZDNhLTg1NzctYmZmOTIwMjAzMmIz","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"e2f4d61a486d1a29f08b621019f861f5","Raw":{"client_id":"toll.portal","redirect_uri":"http://localhost:5001/signin-oidc","response_type":"code id_token","scope":"openid profile toll.api","response_mode":"form_post","nonce":"637631334071956200.MzQyMzJlYjAtOGZhMC00NjE2LWI4Y2YtYjNlOTExOGIyMWE2NDFjMGVhNzAtM2I5NS00ZDNhLTg1NzctYmZmOTIwMjAzMmIz","state":"CfDJ8LeXiLOjpwBMhaueQ_AEsdDz2TncMvM4FpvjEIyzLvXOZSYREJzEXL3zo4qdNBF9VenB3yHtMlCZvgd1G559Yy-j4lkxvDyxEAaxbE-OBYJM3P9a4zmQ8lmxvPJL-FaBesoKTBcT6JQa-o1E-bTW7S2cnlfBPDkwNF1Mnt1VSV46gcVO1Pp35ddFtdIR953r6NXIFpxPcFiz1GpMDoI59gTZSBftGOjMJzOQt6qpHAvxoxwIP8hU1Ys7mgzhsPyvdcPOV0AzYS7B4_kbyg99CBq_Y5dVfZW8WzmL-2rl5jBYcAJRamjIdRREL1zisDKB4A","x-client-SKU":"ID_NETSTANDARD1_4","x-client-ver":"5.2.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2021-07-29 00:30:10.871 -05:00 [DBG] IsActive called from: AuthorizeEndpoint
+2021-07-29 00:30:10.871 -05:00 [DBG] user_consent grant with value: toll.portal|53912b12772325d4d4f8828607a344bae543a179e4a4d1e5c7729b796336b45d not found in store.
+2021-07-29 00:30:10.871 -05:00 [DBG] Found no prior consent from consent store, consent is required
+2021-07-29 00:30:10.871 -05:00 [INF] Showing consent: User has not yet consented
+2021-07-29 00:30:10.878 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:30:10.878 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:30:10.878 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:30:10.878 -05:00 [DBG] No PKCE used.
+2021-07-29 00:30:10.878 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:30:10.878 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:30:12.748 -05:00 [DBG] CORS request made for path: /consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2021-07-29 00:30:12.754 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:30:12.754 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:30:12.755 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:30:12.755 -05:00 [DBG] No PKCE used.
+2021-07-29 00:30:12.755 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:30:12.755 -05:00 [INF] {"SubjectId":"53912b12772325d4d4f8828607a344bae543a179e4a4d1e5c7729b796336b45d","ClientId":"toll.portal","RequestedScopes":["openid","profile","toll.api"],"GrantedScopes":["openid","profile","toll.api"],"ConsentRemembered":true,"Category":"Grants","Name":"Consent granted","EventType":"Information","Id":4000,"Message":null,"ActivityId":"0HMAIA79LKUQB:00000011","TimeStamp":"2021-07-29T05:30:12.0000000Z","ProcessId":15905,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ConsentGrantedEvent"}
+2021-07-29 00:30:12.756 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:30:12.763 -05:00 [DBG] CORS request made for path: /connect/authorize/callback from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2021-07-29 00:30:12.763 -05:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2021-07-29 00:30:12.764 -05:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2021-07-29 00:30:12.764 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2021-07-29 00:30:12.764 -05:00 [DBG] Start authorize callback request
+2021-07-29 00:30:12.764 -05:00 [DBG] User in authorize request: 53912b12772325d4d4f8828607a344bae543a179e4a4d1e5c7729b796336b45d
+2021-07-29 00:30:12.765 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:30:12.765 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:30:12.765 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:30:12.765 -05:00 [DBG] No PKCE used.
+2021-07-29 00:30:12.765 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:30:12.766 -05:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"toll.portal","ClientName":"Toll Portal","RedirectUri":"http://localhost:5001/signin-oidc","AllowedRedirectUris":["http://localhost:5001/signin-oidc"],"SubjectId":"53912b12772325d4d4f8828607a344bae543a179e4a4d1e5c7729b796336b45d","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile toll.api","State":"CfDJ8LeXiLOjpwBMhaueQ_AEsdDz2TncMvM4FpvjEIyzLvXOZSYREJzEXL3zo4qdNBF9VenB3yHtMlCZvgd1G559Yy-j4lkxvDyxEAaxbE-OBYJM3P9a4zmQ8lmxvPJL-FaBesoKTBcT6JQa-o1E-bTW7S2cnlfBPDkwNF1Mnt1VSV46gcVO1Pp35ddFtdIR953r6NXIFpxPcFiz1GpMDoI59gTZSBftGOjMJzOQt6qpHAvxoxwIP8hU1Ys7mgzhsPyvdcPOV0AzYS7B4_kbyg99CBq_Y5dVfZW8WzmL-2rl5jBYcAJRamjIdRREL1zisDKB4A","UiLocales":null,"Nonce":"637631334071956200.MzQyMzJlYjAtOGZhMC00NjE2LWI4Y2YtYjNlOTExOGIyMWE2NDFjMGVhNzAtM2I5NS00ZDNhLTg1NzctYmZmOTIwMjAzMmIz","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"e2f4d61a486d1a29f08b621019f861f5","Raw":{"client_id":"toll.portal","redirect_uri":"http://localhost:5001/signin-oidc","response_type":"code id_token","scope":"openid profile toll.api","response_mode":"form_post","nonce":"637631334071956200.MzQyMzJlYjAtOGZhMC00NjE2LWI4Y2YtYjNlOTExOGIyMWE2NDFjMGVhNzAtM2I5NS00ZDNhLTg1NzctYmZmOTIwMjAzMmIz","state":"CfDJ8LeXiLOjpwBMhaueQ_AEsdDz2TncMvM4FpvjEIyzLvXOZSYREJzEXL3zo4qdNBF9VenB3yHtMlCZvgd1G559Yy-j4lkxvDyxEAaxbE-OBYJM3P9a4zmQ8lmxvPJL-FaBesoKTBcT6JQa-o1E-bTW7S2cnlfBPDkwNF1Mnt1VSV46gcVO1Pp35ddFtdIR953r6NXIFpxPcFiz1GpMDoI59gTZSBftGOjMJzOQt6qpHAvxoxwIP8hU1Ys7mgzhsPyvdcPOV0AzYS7B4_kbyg99CBq_Y5dVfZW8WzmL-2rl5jBYcAJRamjIdRREL1zisDKB4A","x-client-SKU":"ID_NETSTANDARD1_4","x-client-ver":"5.2.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2021-07-29 00:30:12.766 -05:00 [DBG] IsActive called from: AuthorizeEndpoint
+2021-07-29 00:30:12.766 -05:00 [DBG] user_consent grant with value: toll.portal|53912b12772325d4d4f8828607a344bae543a179e4a4d1e5c7729b796336b45d not found in store.
+2021-07-29 00:30:12.766 -05:00 [DBG] Found no prior consent from consent store, consent is required
+2021-07-29 00:30:12.766 -05:00 [INF] User consented to scopes: ["openid","profile","toll.api"]
+2021-07-29 00:30:12.766 -05:00 [DBG] User indicated to remember consent for scopes: ["openid","profile","toll.api"]
+2021-07-29 00:30:12.767 -05:00 [DBG] Client allows remembering consent, and consent given. Updating consent store for subject: 53912b12772325d4d4f8828607a344bae543a179e4a4d1e5c7729b796336b45d
+2021-07-29 00:30:12.771 -05:00 [DBG] Creating Hybrid Flow response.
+2021-07-29 00:30:12.782 -05:00 [DBG] Creating Implicit Flow response.
+2021-07-29 00:30:12.782 -05:00 [DBG] Getting claims for identity token for subject: 53912b12772325d4d4f8828607a344bae543a179e4a4d1e5c7729b796336b45d and client: toll.portal
+2021-07-29 00:30:12.782 -05:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2021-07-29 00:30:12.797 -05:00 [INF] {"ClientId":"toll.portal","ClientName":"Toll Portal","RedirectUri":"http://localhost:5001/signin-oidc","Endpoint":"Authorize","SubjectId":"53912b12772325d4d4f8828607a344bae543a179e4a4d1e5c7729b796336b45d","Scopes":"openid profile toll.api","GrantType":"hybrid","Tokens":[{"TokenType":"id_token","TokenValue":"****bJjg","$type":"Token"},{"TokenType":"code","TokenValue":"****0e22","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HMAIA79LKUQB:00000012","TimeStamp":"2021-07-29T05:30:12.0000000Z","ProcessId":15905,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2021-07-29 00:30:12.797 -05:00 [INF] Authorize endpoint response
+{"SubjectId":"53912b12772325d4d4f8828607a344bae543a179e4a4d1e5c7729b796336b45d","ClientId":"toll.portal","RedirectUri":"http://localhost:5001/signin-oidc","State":"CfDJ8LeXiLOjpwBMhaueQ_AEsdDz2TncMvM4FpvjEIyzLvXOZSYREJzEXL3zo4qdNBF9VenB3yHtMlCZvgd1G559Yy-j4lkxvDyxEAaxbE-OBYJM3P9a4zmQ8lmxvPJL-FaBesoKTBcT6JQa-o1E-bTW7S2cnlfBPDkwNF1Mnt1VSV46gcVO1Pp35ddFtdIR953r6NXIFpxPcFiz1GpMDoI59gTZSBftGOjMJzOQt6qpHAvxoxwIP8hU1Ys7mgzhsPyvdcPOV0AzYS7B4_kbyg99CBq_Y5dVfZW8WzmL-2rl5jBYcAJRamjIdRREL1zisDKB4A","Scope":"openid profile toll.api","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2021-07-29 00:30:12.798 -05:00 [DBG] Augmenting SignInContext
+2021-07-29 00:30:12.798 -05:00 [INF] AuthenticationScheme: idsrv signed in.
+2021-07-29 00:30:12.863 -05:00 [DBG] Request path /connect/token matched to endpoint type Token
+2021-07-29 00:30:12.863 -05:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2021-07-29 00:30:12.863 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2021-07-29 00:30:12.863 -05:00 [DBG] Start token request.
+2021-07-29 00:30:12.864 -05:00 [DBG] Start client validation
+2021-07-29 00:30:12.864 -05:00 [DBG] Start parsing Basic Authentication secret
+2021-07-29 00:30:12.864 -05:00 [DBG] Start parsing for secret in post body
+2021-07-29 00:30:12.867 -05:00 [DBG] Parser found secret: PostBodySecretParser
+2021-07-29 00:30:12.867 -05:00 [DBG] Secret id found: toll.portal
+2021-07-29 00:30:12.867 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:30:12.867 -05:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2021-07-29 00:30:12.868 -05:00 [DBG] Client validation success
+2021-07-29 00:30:12.868 -05:00 [INF] {"ClientId":"toll.portal","AuthenticationMethod":"SharedSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HMAIA79LKUQ5:00000004","TimeStamp":"2021-07-29T05:30:12.0000000Z","ProcessId":15905,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2021-07-29 00:30:12.868 -05:00 [DBG] Start token request validation
+2021-07-29 00:30:12.868 -05:00 [DBG] Start validation of authorization code token request
+2021-07-29 00:30:12.882 -05:00 [DBG] IsActive called from: AuthorizationCodeValidation
+2021-07-29 00:30:12.882 -05:00 [DBG] Validation of authorization code token request success
+2021-07-29 00:30:12.882 -05:00 [INF] Token request validation success
+{"ClientId":"toll.portal","ClientName":"Toll Portal","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"30d27646c6db409c709c09266ceb5793ec487e0b8ff19f25c44918c52ce00e22","RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"toll.portal","client_secret":"***REDACTED***","code":"30d27646c6db409c709c09266ceb5793ec487e0b8ff19f25c44918c52ce00e22","grant_type":"authorization_code","redirect_uri":"http://localhost:5001/signin-oidc"},"$type":"TokenRequestValidationLog"}
+2021-07-29 00:30:12.882 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:30:12.882 -05:00 [DBG] Getting claims for access token for client: toll.portal
+2021-07-29 00:30:12.883 -05:00 [DBG] Getting claims for access token for subject: 53912b12772325d4d4f8828607a344bae543a179e4a4d1e5c7729b796336b45d
+2021-07-29 00:30:12.883 -05:00 [DBG] Get profile called for subject 53912b12772325d4d4f8828607a344bae543a179e4a4d1e5c7729b796336b45d from client Toll Portal with claim types [] via ClaimsProviderAccessToken
+2021-07-29 00:30:12.883 -05:00 [DBG] Issued claims: []
+2021-07-29 00:30:12.896 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:30:12.896 -05:00 [DBG] Getting claims for identity token for subject: 53912b12772325d4d4f8828607a344bae543a179e4a4d1e5c7729b796336b45d and client: toll.portal
+2021-07-29 00:30:12.896 -05:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2021-07-29 00:30:12.909 -05:00 [INF] {"ClientId":"toll.portal","ClientName":"Toll Portal","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":"openid profile toll.api","GrantType":"authorization_code","Tokens":[{"TokenType":"id_token","TokenValue":"****n8fw","$type":"Token"},{"TokenType":"access_token","TokenValue":"****NkPA","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HMAIA79LKUQ5:00000004","TimeStamp":"2021-07-29T05:30:12.0000000Z","ProcessId":15905,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2021-07-29 00:30:12.909 -05:00 [DBG] Token request success.
+2021-07-29 00:31:43.557 -05:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2021-07-29 00:31:43.638 -05:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2021-07-29 00:31:43.641 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2021-07-29 00:31:43.641 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2021-07-29 00:31:43.642 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2021-07-29 00:31:43.642 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2021-07-29 00:31:43.642 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2021-07-29 00:34:48.296 -05:00 [INF] You are using the in-memory version of the persisted grant store. This will store consent decisions, authorization codes, refresh and reference tokens in memory only. If you are using any of those features in production, you want to switch to a different store implementation.
+2021-07-29 00:34:48.543 -05:00 [INF] Using the default authentication scheme idsrv for IdentityServer
+2021-07-29 00:34:48.603 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for authentication
+2021-07-29 00:34:48.603 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-in
+2021-07-29 00:34:48.603 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for sign-out
+2021-07-29 00:34:48.603 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for challenge
+2021-07-29 00:34:48.603 -05:00 [DBG] Using idsrv as default ASP.NET Core scheme for forbid
+2021-07-29 00:35:07.109 -05:00 [DBG] Login Url: /Account/Login
+2021-07-29 00:35:07.113 -05:00 [DBG] Login Return Url Parameter: ReturnUrl
+2021-07-29 00:35:07.113 -05:00 [DBG] Logout Url: /Account/Logout
+2021-07-29 00:35:07.113 -05:00 [DBG] ConsentUrl Url: /consent
+2021-07-29 00:35:07.113 -05:00 [DBG] Consent Return Url Parameter: returnUrl
+2021-07-29 00:35:07.113 -05:00 [DBG] Error Url: /home/error
+2021-07-29 00:35:07.113 -05:00 [DBG] Error Id Parameter: errorId
+2021-07-29 00:35:07.143 -05:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2021-07-29 00:35:07.147 -05:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2021-07-29 00:35:07.147 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2021-07-29 00:35:07.153 -05:00 [DBG] Start discovery request
+2021-07-29 00:35:07.417 -05:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2021-07-29 00:35:07.417 -05:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2021-07-29 00:35:07.417 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2021-07-29 00:35:07.432 -05:00 [DBG] Start key discovery request
+2021-07-29 00:35:07.581 -05:00 [DBG] Request path /connect/endsession matched to endpoint type Endsession
+2021-07-29 00:35:07.584 -05:00 [DBG] Endpoint enabled: Endsession, successfully created handler: IdentityServer4.Endpoints.EndSessionEndpoint
+2021-07-29 00:35:07.584 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.EndSessionEndpoint for /connect/endsession
+2021-07-29 00:35:07.601 -05:00 [DBG] Processing signout request for 53912b12772325d4d4f8828607a344bae543a179e4a4d1e5c7729b796336b45d
+2021-07-29 00:35:07.611 -05:00 [DBG] Start end session request validation
+2021-07-29 00:35:07.621 -05:00 [DBG] Start identity token validation
+2021-07-29 00:35:07.683 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:35:07.683 -05:00 [DBG] Client found: toll.portal / Toll Portal
+2021-07-29 00:35:07.816 -05:00 [DBG] IsActive called from: IdentityTokenValidation
+2021-07-29 00:35:07.817 -05:00 [ERR] User marked as not active: 53912b12772325d4d4f8828607a344bae543a179e4a4d1e5c7729b796336b45d
+2021-07-29 00:35:07.829 -05:00 [INF] End session request validation failure: Error validating id token hint
+{"ClientId":null,"ClientName":null,"SubjectId":"unknown","PostLogOutUri":null,"State":null,"Raw":{"post_logout_redirect_uri":"http://localhost:5001/signout-callback-oidc","id_token_hint":"eyJhbGciOiJSUzI1NiIsImtpZCI6ImJiZjVhYzU1YmQzMDM4Yzg3NjhlZGJhYWMxYzk1YmIwIiwidHlwIjoiSldUIn0.eyJuYmYiOjE2Mjc1MzY2MTIsImV4cCI6MTYyNzUzNjkxMiwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo1MDAwIiwiYXVkIjoidG9sbC5wb3J0YWwiLCJub25jZSI6IjYzNzYzMTMzNDA3MTk1NjIwMC5NelF5TXpKbFlqQXRPR1poTUMwME5qRTJMV0k0WTJZdFlqTmxPVEV4T0dJeU1XRTJOREZqTUdWaE56QXRNMkk1TlMwMFpETmhMVGcxTnpjdFltWm1PVEl3TWpBek1tSXoiLCJpYXQiOjE2Mjc1MzY2MTIsImF0X2hhc2giOiJDVjlEUGg0WklkU21EaGRGeG9aLThBIiwic2lkIjoiZTJmNGQ2MWE0ODZkMWEyOWYwOGI2MjEwMTlmODYxZjUiLCJzdWIiOiI1MzkxMmIxMjc3MjMyNWQ0ZDRmODgyODYwN2EzNDRiYWU1NDNhMTc5ZTRhNGQxZTVjNzcyOWI3OTYzMzZiNDVkIiwiYXV0aF90aW1lIjoxNjI3NTM2NjEwLCJpZHAiOiJNaWNyb3NvZnQiLCJhbXIiOlsiZXh0ZXJuYWwiXX0.AnjTx_vfaUg4WCWglpQ7Pzb5-fXfvvaGRkMUR-ak1zPfJb-x5K3eP0ZYgqj-WwDH5xfrgwXz9OGwYDrL9IocOI0_9S7q6AcKr30-nZNNVsoKyItqpAscYEUJAvP9ipthPmHknd44u-BlUfGD4WfeijYvaYWFpdeadkMtgqsAt8ZS7pQoM-r_Uc7Qe8cFjYqVXy7nKtYmAVBAVv3PmlLT2xJSZqMuQm_Mg3q9NpF3cRwhSaWo847v0CMHz4NlM3ljQv8PulTzi3rRbn-o9noqDw6UAqQxrpyTsSdmJL-nDZbh2-t0cYDpekWnQEt1E0up7vc2KYt93u20SvcSzWn8fw","state":"CfDJ8LeXiLOjpwBMhaueQ_AEsdDJh9UaPB8SxtTgJmiQGxYkyRAoAcW3pE138NYQBVbAWNPuiXMN6aIvy0VnqSKS5Dk9h27ysNeZgQeiEMScj2mHGbMUavmmki0ctQHoQ11gHs8HK3wFd7rADsq9Ik635dE","x-client-SKU":"ID_NETSTANDARD1_4","x-client-ver":"5.2.0.0"},"$type":"EndSessionRequestValidationLog"}
+2021-07-29 00:35:07.841 -05:00 [ERR] Error processing end session request Invalid request
+2021-07-29 00:35:09.359 -05:00 [DBG] CORS request made for path: /Account/Logout from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2021-07-29 00:35:09.427 -05:00 [INF] AuthenticationScheme: idsrv signed out.
+2021-07-29 00:35:09.452 -05:00 [INF] {"SubjectId":"53912b12772325d4d4f8828607a344bae543a179e4a4d1e5c7729b796336b45d","DisplayName":"Daniel Felipe Yepes Ortega","Category":"Authentication","Name":"User Logout Success","EventType":"Success","Id":1002,"Message":null,"ActivityId":"0HMAIAAFQD01S:00000003","TimeStamp":"2021-07-29T05:35:09.0000000Z","ProcessId":16097,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLogoutSuccessEvent"}
+2021-07-29 00:35:09.516 -05:00 [DBG] Request path /connect/endsession/callback matched to endpoint type Endsession
+2021-07-29 00:35:09.518 -05:00 [DBG] Endpoint enabled: Endsession, successfully created handler: IdentityServer4.Endpoints.EndSessionCallbackEndpoint
+2021-07-29 00:35:09.518 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.EndSessionCallbackEndpoint for /connect/endsession/callback
+2021-07-29 00:35:09.530 -05:00 [DBG] Processing signout callback request
+2021-07-29 00:35:09.545 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:35:09.545 -05:00 [DBG] No client front-channel logout URLs
+2021-07-29 00:35:09.545 -05:00 [DBG] No client back-channel logout URLs
+2021-07-29 00:35:09.545 -05:00 [INF] Successful signout callback.
+2021-07-29 00:35:09.545 -05:00 [DBG] No client front-channel iframe urls
+2021-07-29 00:35:09.545 -05:00 [DBG] No client back-channel iframe urls
+2021-07-29 00:35:27.753 -05:00 [DBG] Request path /connect/authorize matched to endpoint type Authorize
+2021-07-29 00:35:27.756 -05:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeEndpoint
+2021-07-29 00:35:27.756 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeEndpoint for /connect/authorize
+2021-07-29 00:35:27.762 -05:00 [DBG] Start authorize request
+2021-07-29 00:35:27.767 -05:00 [DBG] No user present in authorize request
+2021-07-29 00:35:27.772 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:35:27.778 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:35:27.784 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:35:27.786 -05:00 [DBG] No PKCE used.
+2021-07-29 00:35:27.828 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:35:27.833 -05:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"toll.portal","ClientName":"Toll Portal","RedirectUri":"http://localhost:5001/signin-oidc","AllowedRedirectUris":["http://localhost:5001/signin-oidc"],"SubjectId":"anonymous","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile toll.api","State":"CfDJ8LeXiLOjpwBMhaueQ_AEsdDIKKW_UxbEqoJNTxNBjeJAoi7bL2muvFNXVUAIKtX3ajBT8UVo50MsQv3lMuRvw5v0JYFQ2CU7JLI7McfURgsHRKnQyQ9j_lrcuQQ5wKRHO5qrNuUhhu_z7ibnme1wW8O57epI47lVMItbCU8zWq5U6rbmbGp1qxNekLotV6GwhvTnKlq8xJT8GH-7n7UH9NqEGT8lqipqnsszb62IqViz3MCl2MrZdo2TDTAMMAJ9AE58lnzOEhMCilOZbg_VAmPkMjzQHCp1OqMJRYUroxNrruq4Y0P8M6XV1zp-kC-JXQ","UiLocales":null,"Nonce":"637631337277339880.NDJjYWE3YmEtMDAwZS00YjBkLTgyNjItODhiZDNiOTUwZWMwYmMyZWE2ODItYmI2YS00ODU2LThmYWUtNzJiODM1NGM5OWEx","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":null,"Raw":{"client_id":"toll.portal","redirect_uri":"http://localhost:5001/signin-oidc","response_type":"code id_token","scope":"openid profile toll.api","response_mode":"form_post","nonce":"637631337277339880.NDJjYWE3YmEtMDAwZS00YjBkLTgyNjItODhiZDNiOTUwZWMwYmMyZWE2ODItYmI2YS00ODU2LThmYWUtNzJiODM1NGM5OWEx","state":"CfDJ8LeXiLOjpwBMhaueQ_AEsdDIKKW_UxbEqoJNTxNBjeJAoi7bL2muvFNXVUAIKtX3ajBT8UVo50MsQv3lMuRvw5v0JYFQ2CU7JLI7McfURgsHRKnQyQ9j_lrcuQQ5wKRHO5qrNuUhhu_z7ibnme1wW8O57epI47lVMItbCU8zWq5U6rbmbGp1qxNekLotV6GwhvTnKlq8xJT8GH-7n7UH9NqEGT8lqipqnsszb62IqViz3MCl2MrZdo2TDTAMMAJ9AE58lnzOEhMCilOZbg_VAmPkMjzQHCp1OqMJRYUroxNrruq4Y0P8M6XV1zp-kC-JXQ","x-client-SKU":"ID_NETSTANDARD1_4","x-client-ver":"5.2.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2021-07-29 00:35:27.844 -05:00 [INF] Showing login: User is not authenticated
+2021-07-29 00:35:27.872 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:35:27.872 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:35:27.872 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:35:27.872 -05:00 [DBG] No PKCE used.
+2021-07-29 00:35:27.872 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:35:27.877 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:35:29.339 -05:00 [INF] AuthenticationScheme: Microsoft was challenged.
+2021-07-29 00:35:31.878 -05:00 [INF] AuthenticationScheme: idsrv.external signed in.
+2021-07-29 00:35:31.902 -05:00 [INF] {"Username":null,"Provider":"Microsoft","ProviderUserId":"9de2d92f-1f0b-4bfd-b264-05b8557f518f","SubjectId":"f9aea8221e6c87d9f42f5f90d953140ce13757855dbbdf29204968f9fff26c44","DisplayName":"Daniel Felipe Yepes Ortega","Endpoint":"UI","Category":"Authentication","Name":"User Login Success","EventType":"Success","Id":1000,"Message":null,"ActivityId":"0HMAIAAFQD01V:00000002","TimeStamp":"2021-07-29T05:35:31.0000000Z","ProcessId":16097,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"UserLoginSuccessEvent"}
+2021-07-29 00:35:31.913 -05:00 [DBG] Augmenting SignInContext
+2021-07-29 00:35:31.916 -05:00 [DBG] Adding amr claim with value: external
+2021-07-29 00:35:31.920 -05:00 [INF] AuthenticationScheme: idsrv signed in.
+2021-07-29 00:35:31.920 -05:00 [INF] AuthenticationScheme: idsrv.external signed out.
+2021-07-29 00:35:31.920 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:35:31.920 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:35:31.921 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:35:31.921 -05:00 [DBG] No PKCE used.
+2021-07-29 00:35:31.921 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:35:31.924 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:35:31.931 -05:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2021-07-29 00:35:31.932 -05:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2021-07-29 00:35:31.932 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2021-07-29 00:35:31.940 -05:00 [DBG] Start authorize callback request
+2021-07-29 00:35:31.944 -05:00 [DBG] User in authorize request: f9aea8221e6c87d9f42f5f90d953140ce13757855dbbdf29204968f9fff26c44
+2021-07-29 00:35:31.944 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:35:31.944 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:35:31.944 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:35:31.944 -05:00 [DBG] No PKCE used.
+2021-07-29 00:35:31.945 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:35:31.945 -05:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"toll.portal","ClientName":"Toll Portal","RedirectUri":"http://localhost:5001/signin-oidc","AllowedRedirectUris":["http://localhost:5001/signin-oidc"],"SubjectId":"f9aea8221e6c87d9f42f5f90d953140ce13757855dbbdf29204968f9fff26c44","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile toll.api","State":"CfDJ8LeXiLOjpwBMhaueQ_AEsdDIKKW_UxbEqoJNTxNBjeJAoi7bL2muvFNXVUAIKtX3ajBT8UVo50MsQv3lMuRvw5v0JYFQ2CU7JLI7McfURgsHRKnQyQ9j_lrcuQQ5wKRHO5qrNuUhhu_z7ibnme1wW8O57epI47lVMItbCU8zWq5U6rbmbGp1qxNekLotV6GwhvTnKlq8xJT8GH-7n7UH9NqEGT8lqipqnsszb62IqViz3MCl2MrZdo2TDTAMMAJ9AE58lnzOEhMCilOZbg_VAmPkMjzQHCp1OqMJRYUroxNrruq4Y0P8M6XV1zp-kC-JXQ","UiLocales":null,"Nonce":"637631337277339880.NDJjYWE3YmEtMDAwZS00YjBkLTgyNjItODhiZDNiOTUwZWMwYmMyZWE2ODItYmI2YS00ODU2LThmYWUtNzJiODM1NGM5OWEx","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"acacfb41eade4c134baf2a3d6e5b47ce","Raw":{"client_id":"toll.portal","redirect_uri":"http://localhost:5001/signin-oidc","response_type":"code id_token","scope":"openid profile toll.api","response_mode":"form_post","nonce":"637631337277339880.NDJjYWE3YmEtMDAwZS00YjBkLTgyNjItODhiZDNiOTUwZWMwYmMyZWE2ODItYmI2YS00ODU2LThmYWUtNzJiODM1NGM5OWEx","state":"CfDJ8LeXiLOjpwBMhaueQ_AEsdDIKKW_UxbEqoJNTxNBjeJAoi7bL2muvFNXVUAIKtX3ajBT8UVo50MsQv3lMuRvw5v0JYFQ2CU7JLI7McfURgsHRKnQyQ9j_lrcuQQ5wKRHO5qrNuUhhu_z7ibnme1wW8O57epI47lVMItbCU8zWq5U6rbmbGp1qxNekLotV6GwhvTnKlq8xJT8GH-7n7UH9NqEGT8lqipqnsszb62IqViz3MCl2MrZdo2TDTAMMAJ9AE58lnzOEhMCilOZbg_VAmPkMjzQHCp1OqMJRYUroxNrruq4Y0P8M6XV1zp-kC-JXQ","x-client-SKU":"ID_NETSTANDARD1_4","x-client-ver":"5.2.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2021-07-29 00:35:31.945 -05:00 [DBG] IsActive called from: AuthorizeEndpoint
+2021-07-29 00:35:31.964 -05:00 [DBG] user_consent grant with value: toll.portal|f9aea8221e6c87d9f42f5f90d953140ce13757855dbbdf29204968f9fff26c44 not found in store.
+2021-07-29 00:35:31.964 -05:00 [DBG] Found no prior consent from consent store, consent is required
+2021-07-29 00:35:31.965 -05:00 [INF] Showing consent: User has not yet consented
+2021-07-29 00:35:31.992 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:35:31.992 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:35:31.992 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:35:31.992 -05:00 [DBG] No PKCE used.
+2021-07-29 00:35:31.992 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:35:31.992 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:35:33.796 -05:00 [DBG] CORS request made for path: /consent from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2021-07-29 00:35:33.817 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:35:33.818 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:35:33.818 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:35:33.818 -05:00 [DBG] No PKCE used.
+2021-07-29 00:35:33.818 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:35:33.820 -05:00 [INF] {"SubjectId":"f9aea8221e6c87d9f42f5f90d953140ce13757855dbbdf29204968f9fff26c44","ClientId":"toll.portal","RequestedScopes":["openid","profile","toll.api"],"GrantedScopes":["openid","profile","toll.api"],"ConsentRemembered":true,"Category":"Grants","Name":"Consent granted","EventType":"Information","Id":4000,"Message":null,"ActivityId":"0HMAIAAFQD01S:00000008","TimeStamp":"2021-07-29T05:35:33.0000000Z","ProcessId":16097,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ConsentGrantedEvent"}
+2021-07-29 00:35:33.833 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:35:33.841 -05:00 [DBG] CORS request made for path: /connect/authorize/callback from origin: null but was ignored because path was not for an allowed IdentityServer CORS endpoint
+2021-07-29 00:35:33.842 -05:00 [DBG] Request path /connect/authorize/callback matched to endpoint type Authorize
+2021-07-29 00:35:33.842 -05:00 [DBG] Endpoint enabled: Authorize, successfully created handler: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint
+2021-07-29 00:35:33.842 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.AuthorizeCallbackEndpoint for /connect/authorize/callback
+2021-07-29 00:35:33.842 -05:00 [DBG] Start authorize callback request
+2021-07-29 00:35:33.846 -05:00 [DBG] User in authorize request: f9aea8221e6c87d9f42f5f90d953140ce13757855dbbdf29204968f9fff26c44
+2021-07-29 00:35:33.846 -05:00 [DBG] Start authorize request protocol validation
+2021-07-29 00:35:33.846 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:35:33.846 -05:00 [DBG] Checking for PKCE parameters
+2021-07-29 00:35:33.846 -05:00 [DBG] No PKCE used.
+2021-07-29 00:35:33.846 -05:00 [DBG] Calling into custom validator: IdentityServer4.Validation.DefaultCustomAuthorizeRequestValidator
+2021-07-29 00:35:33.847 -05:00 [INF] ValidatedAuthorizeRequest
+{"ClientId":"toll.portal","ClientName":"Toll Portal","RedirectUri":"http://localhost:5001/signin-oidc","AllowedRedirectUris":["http://localhost:5001/signin-oidc"],"SubjectId":"f9aea8221e6c87d9f42f5f90d953140ce13757855dbbdf29204968f9fff26c44","ResponseType":"code id_token","ResponseMode":"form_post","GrantType":"hybrid","RequestedScopes":"openid profile toll.api","State":"CfDJ8LeXiLOjpwBMhaueQ_AEsdDIKKW_UxbEqoJNTxNBjeJAoi7bL2muvFNXVUAIKtX3ajBT8UVo50MsQv3lMuRvw5v0JYFQ2CU7JLI7McfURgsHRKnQyQ9j_lrcuQQ5wKRHO5qrNuUhhu_z7ibnme1wW8O57epI47lVMItbCU8zWq5U6rbmbGp1qxNekLotV6GwhvTnKlq8xJT8GH-7n7UH9NqEGT8lqipqnsszb62IqViz3MCl2MrZdo2TDTAMMAJ9AE58lnzOEhMCilOZbg_VAmPkMjzQHCp1OqMJRYUroxNrruq4Y0P8M6XV1zp-kC-JXQ","UiLocales":null,"Nonce":"637631337277339880.NDJjYWE3YmEtMDAwZS00YjBkLTgyNjItODhiZDNiOTUwZWMwYmMyZWE2ODItYmI2YS00ODU2LThmYWUtNzJiODM1NGM5OWEx","AuthenticationContextReferenceClasses":null,"DisplayMode":null,"PromptMode":null,"MaxAge":null,"LoginHint":null,"SessionId":"acacfb41eade4c134baf2a3d6e5b47ce","Raw":{"client_id":"toll.portal","redirect_uri":"http://localhost:5001/signin-oidc","response_type":"code id_token","scope":"openid profile toll.api","response_mode":"form_post","nonce":"637631337277339880.NDJjYWE3YmEtMDAwZS00YjBkLTgyNjItODhiZDNiOTUwZWMwYmMyZWE2ODItYmI2YS00ODU2LThmYWUtNzJiODM1NGM5OWEx","state":"CfDJ8LeXiLOjpwBMhaueQ_AEsdDIKKW_UxbEqoJNTxNBjeJAoi7bL2muvFNXVUAIKtX3ajBT8UVo50MsQv3lMuRvw5v0JYFQ2CU7JLI7McfURgsHRKnQyQ9j_lrcuQQ5wKRHO5qrNuUhhu_z7ibnme1wW8O57epI47lVMItbCU8zWq5U6rbmbGp1qxNekLotV6GwhvTnKlq8xJT8GH-7n7UH9NqEGT8lqipqnsszb62IqViz3MCl2MrZdo2TDTAMMAJ9AE58lnzOEhMCilOZbg_VAmPkMjzQHCp1OqMJRYUroxNrruq4Y0P8M6XV1zp-kC-JXQ","x-client-SKU":"ID_NETSTANDARD1_4","x-client-ver":"5.2.0.0"},"$type":"AuthorizeRequestValidationLog"}
+2021-07-29 00:35:33.847 -05:00 [DBG] IsActive called from: AuthorizeEndpoint
+2021-07-29 00:35:33.847 -05:00 [DBG] user_consent grant with value: toll.portal|f9aea8221e6c87d9f42f5f90d953140ce13757855dbbdf29204968f9fff26c44 not found in store.
+2021-07-29 00:35:33.847 -05:00 [DBG] Found no prior consent from consent store, consent is required
+2021-07-29 00:35:33.856 -05:00 [INF] User consented to scopes: ["openid","profile","toll.api"]
+2021-07-29 00:35:33.858 -05:00 [DBG] User indicated to remember consent for scopes: ["openid","profile","toll.api"]
+2021-07-29 00:35:33.862 -05:00 [DBG] Client allows remembering consent, and consent given. Updating consent store for subject: f9aea8221e6c87d9f42f5f90d953140ce13757855dbbdf29204968f9fff26c44
+2021-07-29 00:35:33.875 -05:00 [DBG] Creating Hybrid Flow response.
+2021-07-29 00:35:33.900 -05:00 [DBG] Creating Implicit Flow response.
+2021-07-29 00:35:33.911 -05:00 [DBG] Getting claims for identity token for subject: f9aea8221e6c87d9f42f5f90d953140ce13757855dbbdf29204968f9fff26c44 and client: toll.portal
+2021-07-29 00:35:33.914 -05:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2021-07-29 00:35:33.960 -05:00 [INF] {"ClientId":"toll.portal","ClientName":"Toll Portal","RedirectUri":"http://localhost:5001/signin-oidc","Endpoint":"Authorize","SubjectId":"f9aea8221e6c87d9f42f5f90d953140ce13757855dbbdf29204968f9fff26c44","Scopes":"openid profile toll.api","GrantType":"hybrid","Tokens":[{"TokenType":"id_token","TokenValue":"****l-Mg","$type":"Token"},{"TokenType":"code","TokenValue":"****ac14","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HMAIAAFQD01S:00000009","TimeStamp":"2021-07-29T05:35:33.0000000Z","ProcessId":16097,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2021-07-29 00:35:33.963 -05:00 [INF] Authorize endpoint response
+{"SubjectId":"f9aea8221e6c87d9f42f5f90d953140ce13757855dbbdf29204968f9fff26c44","ClientId":"toll.portal","RedirectUri":"http://localhost:5001/signin-oidc","State":"CfDJ8LeXiLOjpwBMhaueQ_AEsdDIKKW_UxbEqoJNTxNBjeJAoi7bL2muvFNXVUAIKtX3ajBT8UVo50MsQv3lMuRvw5v0JYFQ2CU7JLI7McfURgsHRKnQyQ9j_lrcuQQ5wKRHO5qrNuUhhu_z7ibnme1wW8O57epI47lVMItbCU8zWq5U6rbmbGp1qxNekLotV6GwhvTnKlq8xJT8GH-7n7UH9NqEGT8lqipqnsszb62IqViz3MCl2MrZdo2TDTAMMAJ9AE58lnzOEhMCilOZbg_VAmPkMjzQHCp1OqMJRYUroxNrruq4Y0P8M6XV1zp-kC-JXQ","Scope":"openid profile toll.api","Error":null,"ErrorDescription":null,"$type":"AuthorizeResponseLog"}
+2021-07-29 00:35:33.979 -05:00 [DBG] Augmenting SignInContext
+2021-07-29 00:35:33.980 -05:00 [INF] AuthenticationScheme: idsrv signed in.
+2021-07-29 00:35:34.127 -05:00 [DBG] Request path /connect/token matched to endpoint type Token
+2021-07-29 00:35:34.133 -05:00 [DBG] Endpoint enabled: Token, successfully created handler: IdentityServer4.Endpoints.TokenEndpoint
+2021-07-29 00:35:34.133 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.TokenEndpoint for /connect/token
+2021-07-29 00:35:34.145 -05:00 [DBG] Start token request.
+2021-07-29 00:35:34.154 -05:00 [DBG] Start client validation
+2021-07-29 00:35:34.162 -05:00 [DBG] Start parsing Basic Authentication secret
+2021-07-29 00:35:34.168 -05:00 [DBG] Start parsing for secret in post body
+2021-07-29 00:35:34.172 -05:00 [DBG] Parser found secret: PostBodySecretParser
+2021-07-29 00:35:34.172 -05:00 [DBG] Secret id found: toll.portal
+2021-07-29 00:35:34.172 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:35:34.185 -05:00 [DBG] Secret validator success: HashedSharedSecretValidator
+2021-07-29 00:35:34.185 -05:00 [DBG] Client validation success
+2021-07-29 00:35:34.185 -05:00 [INF] {"ClientId":"toll.portal","AuthenticationMethod":"SharedSecret","Category":"Authentication","Name":"Client Authentication Success","EventType":"Success","Id":1010,"Message":null,"ActivityId":"0HMAIAAFQD01R:00000003","TimeStamp":"2021-07-29T05:35:34.0000000Z","ProcessId":16097,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"ClientAuthenticationSuccessEvent"}
+2021-07-29 00:35:34.193 -05:00 [DBG] Start token request validation
+2021-07-29 00:35:34.207 -05:00 [DBG] Start validation of authorization code token request
+2021-07-29 00:35:34.227 -05:00 [DBG] IsActive called from: AuthorizationCodeValidation
+2021-07-29 00:35:34.227 -05:00 [DBG] Validation of authorization code token request success
+2021-07-29 00:35:34.231 -05:00 [INF] Token request validation success
+{"ClientId":"toll.portal","ClientName":"Toll Portal","GrantType":"authorization_code","Scopes":null,"AuthorizationCode":"b18ecdcba46b769bfb8bed7def23886f4b6d701c7d2cc342f0c8b94fe7efac14","RefreshToken":null,"UserName":null,"AuthenticationContextReferenceClasses":null,"Tenant":null,"IdP":null,"Raw":{"client_id":"toll.portal","client_secret":"***REDACTED***","code":"b18ecdcba46b769bfb8bed7def23886f4b6d701c7d2cc342f0c8b94fe7efac14","grant_type":"authorization_code","redirect_uri":"http://localhost:5001/signin-oidc"},"$type":"TokenRequestValidationLog"}
+2021-07-29 00:35:34.251 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:35:34.269 -05:00 [DBG] Getting claims for access token for client: toll.portal
+2021-07-29 00:35:34.270 -05:00 [DBG] Getting claims for access token for subject: f9aea8221e6c87d9f42f5f90d953140ce13757855dbbdf29204968f9fff26c44
+2021-07-29 00:35:34.274 -05:00 [DBG] Get profile called for subject f9aea8221e6c87d9f42f5f90d953140ce13757855dbbdf29204968f9fff26c44 from client Toll Portal with claim types [] via ClaimsProviderAccessToken
+2021-07-29 00:35:34.275 -05:00 [DBG] Issued claims: []
+2021-07-29 00:35:34.291 -05:00 [DBG] client configuration validation for client toll.portal succeeded.
+2021-07-29 00:35:34.291 -05:00 [DBG] Getting claims for identity token for subject: f9aea8221e6c87d9f42f5f90d953140ce13757855dbbdf29204968f9fff26c44 and client: toll.portal
+2021-07-29 00:35:34.291 -05:00 [DBG] In addition to an id_token, an access_token was requested. No claims other than sub are included in the id_token. To obtain more user claims, either use the user info endpoint or set AlwaysIncludeUserClaimsInIdToken on the client configuration.
+2021-07-29 00:35:34.310 -05:00 [INF] {"ClientId":"toll.portal","ClientName":"Toll Portal","RedirectUri":null,"Endpoint":"Token","SubjectId":null,"Scopes":"openid profile toll.api","GrantType":"authorization_code","Tokens":[{"TokenType":"id_token","TokenValue":"****LsHQ","$type":"Token"},{"TokenType":"access_token","TokenValue":"****N3Ew","$type":"Token"}],"Category":"Token","Name":"Token Issued Success","EventType":"Success","Id":2000,"Message":null,"ActivityId":"0HMAIAAFQD01R:00000003","TimeStamp":"2021-07-29T05:35:34.0000000Z","ProcessId":16097,"LocalIpAddress":"::1:5000","RemoteIpAddress":"::1","$type":"TokenIssuedSuccessEvent"}
+2021-07-29 00:35:34.312 -05:00 [DBG] Token request success.
+2021-07-29 00:35:37.995 -05:00 [DBG] Request path /.well-known/openid-configuration matched to endpoint type Discovery
+2021-07-29 00:35:37.996 -05:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryEndpoint
+2021-07-29 00:35:37.996 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryEndpoint for /.well-known/openid-configuration
+2021-07-29 00:35:37.996 -05:00 [DBG] Start discovery request
+2021-07-29 00:35:38.146 -05:00 [DBG] Request path /.well-known/openid-configuration/jwks matched to endpoint type Discovery
+2021-07-29 00:35:38.147 -05:00 [DBG] Endpoint enabled: Discovery, successfully created handler: IdentityServer4.Endpoints.DiscoveryKeyEndpoint
+2021-07-29 00:35:38.147 -05:00 [INF] Invoking IdentityServer endpoint: IdentityServer4.Endpoints.DiscoveryKeyEndpoint for /.well-known/openid-configuration/jwks
+2021-07-29 00:35:38.147 -05:00 [DBG] Start key discovery request
